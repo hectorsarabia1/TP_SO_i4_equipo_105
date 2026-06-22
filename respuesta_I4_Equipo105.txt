@@ -1,0 +1,20 @@
+Participantes:
+Sebastián Rulet (ALFA),
+Horacio Gabriel Benitez (BETA),
+Hector Franco Sarabia (GAMMA)
+
+A- ¿Qué color de fondo tiene su página en el TESTING ?
+
+El color de fondo que tiene en la pagina de TESTING es AZUL.
+
+B- ¿Qué color de fondo tiene su página en el DESARROLLO ?
+
+El color de fondo que tiene en la pagina de DESARROLLO es AMARILLO.
+
+C- ¿Qué color de fondo tiene su página en el MASTER?
+
+El color de fondo que tiene en la pagina de MAIN es AMARILLO porque se decidio entre el color azul de TESTING o AMARILLO de que ya estaba en el MAIN.
+ 
+D- ¿Qué favicon quedó en el MASTER el de ALFA o el de BETA?
+
+Quedo el de BETA, ya que ALFA agrego su favicon en el paso 4 y beta lo reemplazo en el paso 5. 
