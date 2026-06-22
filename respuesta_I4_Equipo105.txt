@@ -1,3 +1,5 @@
+Interacción 4 - Equipo 105
+
 Participantes:
 Sebastián Rulet (ALFA),
 Horacio Gabriel Benitez (BETA),
@@ -18,3 +20,38 @@ El color de fondo que tiene en la pagina de MAIN es AMARILLO porque se decidio e
 D- ¿Qué favicon quedó en el MASTER el de ALFA o el de BETA?
 
 Quedo el de BETA, ya que ALFA agrego su favicon en el paso 4 y beta lo reemplazo en el paso 5. 
+
+===================================================
+
+E- ¿Algún integrante tuvo problemas al hacer el push?
+Sí. ALFA no tuvo problema. BETA (segundo) y GAMMA
+(tercero). A ambos les dio fallo, hicieron un pull y un add, sacaron lo agregado automáticamente y realizaron el pull.
+
+F- ¿Qué problemas surgieron?
+Git rechazó los push de BETA y GAMMA con el error "non-fast-forward /
+Updates were rejected because the remote contains work that you do not have
+locally". Pasa porque los tres editaron el MISMO archivo (index.html) en la
+MISMA rama (TESTING): cuando el segundo y el tercero quisieron subir, el
+remoto ya tenía commits que ellos no tenían en local. Al hacer "git pull"
+para actualizar, además apareció un CONFLICTO de fusión en index.html, porque
+todos agregaron su <p> en la misma zona del archivo.
+
+
+G- ¿Qué soluciones pueden aplicar y cual seria la consecuencia de cada solución
+adoptada?
+1) git pull --rebase + resolver conflicto + push
+   Consecuencia: mismo resultado (no se pierde nada) pero el historial queda
+   lineal y más prolijo, porque reaplica tu commit encima del remoto.
+
+2) git push -f (forzado)
+   Consecuencia: SOBREESCRIBE el remoto con tu versión local y BORRA los
+   commits que otros subieron antes. Se pierden los <p> de los compañeros.
+   NO se debe usar acá.
+
+H- ¿Qué sucede si cada uno utiliza el push -f?
+Cada push forzado pisa el trabajo del anterior. Si el ultimo en actualzar es GAMMA solo queda el push de GAMMA y los demás se pierden. El push -f destruye, descarta los commits de los demás.
+
+I- ¿Qué debo hacer para que el index.html tengas todos los <p> de los puntos 18,19 y 20
+en DESARROLLO?
+NO usar push -f. Cada uno, antes de pushear, debe actualizar y resolver
+conservando los <p> de todos
